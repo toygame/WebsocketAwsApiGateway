@@ -19,6 +19,10 @@ Install package dependencies via npm.
 ```sh
 npm install
 ```
+Install ```ngrok``` in global package
+```sh
+npm install -g ngrok
+```
 Install ```wscat``` in global package
 ```sh
 npm install -g wscat
