@@ -12,23 +12,37 @@
 - nodejs >= 14.0
 - npm >= 7.11.1
 - ngrok >= 2.3.35
+- wscat >= 4.0.1
 
 ## Install
 Install package dependencies via npm.
 ```sh
 npm install
 ```
-
+Install ```wscat``` in global package
+```sh
+npm install -g wscat
+```
 ## Usage
-Run Express server, the server will binding on port ```3000```.
+1.Run Express server, the server will binding on port ```3000```.
 ```sh
 npm run start
 ```
-Start ngrok command with ```http``` port ```3000```
+2.Start ngrok command with ```http``` port ```3000```
 ```sh
 ngrok http 3000
 ```
-Run client connected to server.
+3.Copy you url-endpoint from ```ngrok``` and paste into Aws-ApiGateway
+
+4.Config Routes type [$connect, $disconnect, $default] in Aws-ApiGateway
+
+5.Deploy Aws-ApiGateway
+
+6.Run ```wscat``` in another terminal.
+```sh
+wscat -c wss://{api-id}.execute-api.{aws-region}.amazonaws.com/{stage}/
+```
+7.Run client connected to server.
 ```sh
 npm run client
 ```
