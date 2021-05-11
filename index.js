@@ -26,7 +26,6 @@ app.post('/connect', (req, res) => {
    */ 
   const connectionId = req.body.connection_id
   connectionClient.push(connectionId)
-  
   console.log('connectionId connected :>> ', connectionId);
   res.status(200).end()
 })
@@ -38,7 +37,6 @@ app.post('/disconnect', (req, res) => {
    */
   const connectionId = req.body.connection_id
   removeConnectionId(connectionId)
-
   console.log('connectionId disconnected :>> ', connectionId);
   res.status(200).end()
 })
