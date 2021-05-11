@@ -45,7 +45,6 @@ app.post('/disconnect', (req, res) => {
 
 app.post('/handle-event', async (req, res) => {
   console.log('message :>> ', req.body)
-  const connectionId = req.body.connection_id
   const responseBody = {
     body: req.body.body.message,
   }
