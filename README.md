@@ -19,6 +19,10 @@ Install package dependencies via npm.
 ```sh
 npm install
 ```
+Install ```ngrok``` in global package
+```sh
+npm install -g ngrok
+```
 Install ```wscat``` in global package
 ```sh
 npm install -g wscat
@@ -26,7 +30,7 @@ npm install -g wscat
 ## Usage
 1.Run Express server, the server will binding on port ```3000```.
 ```sh
-npm run start
+npm start
 ```
 2.Start ngrok command with ```http``` port ```3000```
 ```sh
