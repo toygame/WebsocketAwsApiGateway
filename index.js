@@ -30,7 +30,7 @@ app.post('/connect', (req, res) => {
   res.status(200).end()
 })
 
-app.post('/disconnect', (req, res) => {
+app.delete('/disconnect', (req, res) => {
   /**
    * Remove connection_id from cache or database,
    * Implement your code below.
